@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP">
+<head>
+	<title>俺様.jp</title>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="description" content="fjmotoです。フリーランスのSE/PGやっております。このサーバではブログなり開発中のテストサイトなり動かしております。" />
+	<meta name="keywords" content="oresama,俺様,fjmoto,桜上水,桜上水日記,デンゴンバン,SE,PG,フリー,フリーランス,PHP,Perl,Ruby,CakePHP,RHCE,Ruby on Rails" />
+	<meta name="robots" content="index, follow" />
+	<link rel="shortcut icon" href="http://oresama.jp/favicon.ico" type="image/x-icon" />
+	<style media="screen" type="text/css">
+	/* <!-- */
+	/* General styles */
+	body {
+		margin:0;
+		padding:0;
+		border:0;			/* This removes the border around the viewport in old versions of IE */
+		width:100%;
+		background:#fff;
+		min-width:600px;		/* Minimum width of layout - remove line if not required */
+						/* The min-width property does not work in old versions of Internet Explorer */
+		font-size:90%;
+	}
+	a {
+		color:#369;
+	}
+	a:hover {
+		color:#fff;
+		background:#369;
+		text-decoration:none;
+	}
+	h1, h2, h3, h4 {
+		margin:.8em 0 .2em 0;
+		padding:0;
+	}
+	h1, h2 {
+		text-align: center;
+	}
+	p {
+		margin:.4em 0 .8em 0;
+		padding:0;
+	}
+	img {
+		margin:10px 0 5px;
+	}
+	/* Header styles */
+	#header {
+		clear:both;
+		float:left;
+		width:100%;
+	}
+	#header {
+		border-bottom:1px solid #000;
+	}
+	#header p,
+	#header h1,
+	#header h2 {
+		padding:.4em 15px 0 15px;
+		margin:0;
+	}
+	#header ul {
+		clear:left;
+		float:left;
+		width:100%;
+		list-style:none;
+		margin:10px 0 0 0;
+		padding:0;
+	}
+	#header ul li {
+		display:inline;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	#header ul li a {
+		display:block;
+		float:left;
+		margin:0 0 0 1px;
+		padding:3px 10px;
+		text-align:center;
+		background:#eee;
+		color:#000;
+		text-decoration:none;
+		position:relative;
+		left:15px;
+		line-height:1.3em;
+	}
+	#header ul li a:hover {
+		background:#369;
+		color:#fff;
+	}
+	#header ul li a.active,
+	#header ul li a.active:hover {
+		color:#fff;
+		background:#000;
+		font-weight:bold;
+	}
+	#header ul li a span {
+		display:block;
+	}
+	/* 'widths' sub menu */
+	#layoutdims {
+		clear:both;
+		background:#eee;
+		border-top:4px solid #000;
+		margin:0;
+		padding:6px 15px !important;
+		text-align:right;
+	}
+	/* column container */
+	.colmask {
+		position:relative;	/* This fixes the IE7 overflow hidden bug */
+		clear:both;
+		float:left;
+		width:100%;			/* width of whole page */
+		overflow:hidden;		/* This chops off any overhanging divs */
+	}
+	/* common column settings */
+	.colright,
+	.colmid,
+	.colleft {
+		float:left;
+		width:100%;			/* width of page */
+		position:relative;
+	}
+	.col1,
+	.col2,
+	.col3 {
+		float:left;
+		position:relative;
+		padding:0 0 1em 0;	/* no left and right padding on columns, we just make them narrower instead 
+						only padding top and bottom is included here, make it whatever value you need */
+		overflow:hidden;
+	}
+	/* 3 Column settings */
+	.threecol {
+		background:#eee;		/* right column background colour */
+	}
+	.threecol .colmid {
+		right:25%;			/* width of the right column */
+		background:#fff;		/* center column background colour */
+	}
+	.threecol .colleft {
+		right:50%;			/* width of the middle column */
+		background:#f4f4f4;	/* left column background colour */
+	}
+	.threecol .col1 {
+		width:46%;			/* width of center column content (column width minus padding on either side) */
+		left:102%;			/* 100% plus left padding of center column */
+	}
+	.threecol .col2 {
+		width:21%;			/* Width of left column content (column width minus padding on either side) */
+		left:31%;			/* width of (right column) plus (center column left and right padding) plus (left column left padding) */
+	}
+	.threecol .col3 {
+		width:21%;			/* Width of right column content (column width minus padding on either side) */
+		left:85%;			/* Please make note of the brackets here:
+						(100% - left column width) plus (center column left and right padding) plus (left column left and right padding) plus (right column left padding) */
+	}
+	/* Footer styles */
+	#footer {
+		clear:both;
+		float:left;
+		width:100%;
+		border-top:1px solid #000;
+	}
+	#footer p {
+		padding:10px;
+		margin:0;
+	}
+	/* --> */
+	</style>
+	<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAcTVmXDjPTZhxLXltKo5saBTxx-3W6cEwL85DWtp81qfjO2kGfBQZ9EaQwwrnao52GGnP3wInyYP9Xg"></script>
+	<script type="text/javascript">google.load("feeds", "1");</script>
+</head>
+<body>
+
+<div id="header">
+	<p><a href="/" title="return TOP" class="active">TOP</a> | <a href="/blog/" title="桜上水日記">桜上水日記＃２(blog)</a> | <a href="/cgi-bin/bbs/stlfbbs.cgi" title="BBS">デンゴンバン(bbs)</a></p>
+	<h1><img src="http://oresama.jp/images/oresama.png" width="700" height="92" alt="俺様ジャパン" /></h1>
+	<h2>日本の俺様大集合！</h2>
+<!--
+	<ul>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-3-column.htm">3 Column <span>Holy Grail</span></a></li>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-3-column-blog-style.htm">3 Column <span>Blog Style</span></a></li>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-2-column-left-menu.htm">2 Column <span>Left Menu</span></a></li>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-2-column-right-menu.htm">2 Column <span>Right Menu</span></a></li>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-2-column-double-page.htm">2 Column <span>Double Page</span></a></li>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-full-page.htm">1 Column <span>Full Page</span></a></li>
+		<li><a href="http://matthewjamestaylor.com/blog/perfect-stacked-columns.htm">Stacked <span>columns</span></a></li>
+	</ul>
+-->
+	<!-- SiteSearch Google -->
+	<form method="get" action="http://www.google.co.jp/search" id="layoutdims">
+		<input type="text" name="q" size="31" maxlength="255" value="" />
+		<input type="hidden" name="hl" value="ja" />
+		<input type="submit" name="btnG" value="サイト内検索" />
+		<input type="hidden" name="domains" value="oresama.jp" />
+		<input type="hidden" name="ie" value="utf8" />
+		<input type="hidden" name="sitesearch" value="oresama.jp" />
+		Powered by <a href="http://www.google.co.jp/">Google</a>
+	</form>
+	<!-- SiteSearch Google -->
+
+</div>
+<div class="colmask threecol">
+	<div class="colmid">
+		<div class="colleft">
+			<div class="col1">
+				<!-- Column 1 start -->
+				<h3>プロフィール</h3>
+				<h4>氏名</h4>
+				<p>Fujimoto, Hironori</p>
+				<h4>履歴</h4>
+				<p><a href="http://www.hb.kif.ed.jp/" target="_blank">九州国際大学附属高校</a> ＞ <a href="http://www.tsukuba.ac.jp/" target="_blank">筑波大学</a> ＞ <a href="http://www.is.tsukuba.ac.jp/" target="_blank">筑波大学大学院</a> ＞ <a href="http://www.intel.co.jp/" target="_blank">Intel Japan K.K.</a> ＞ Net Village K.K. (現<a href="http://www.fonfun.co.jp/" target="_blank">fonfan</a>) ＞ 独立</p>
+				<p>フリーのWeb系SE/PG(8年目)です。情報処理畑一筋。<br />
+				案件レベルでの提案から開発まで行っております。保守は個人レベルでしかできません。。。<br />
+				最近は不景気の煽りを受けてお仕事量が減少、時間が出来たのでお勉強タイムと割り切っていろいろ手を出しております。</p>
+				<p>2009.10現在、Webからのお仕事・案件のご依頼はお受けしておりませんが、ご相談等ございましたら左記gmail、window live, skypeまでご連絡下さい。(＠は半角です)</p>
+				<h4>ハンドル等</h4>
+				<p>ネット上ではfj, fjmoto, ソレガシ, 俺様の人 等のHNで活動中。</p>
+				<h4>興味</h4>
+				<p>宇宙、デジタルガジェット、機械モノ大好きです。</p>
+				<p>iPhoneアプリ作りたいなあ。SDK動くMac(Mac OS X v10.5.2 or later)余らせてる方、適価で譲って頂けませんか？</p>
+				<h4>技能等</h4>
+				<dl>
+					<dt><strong>Linux</strong></dt>
+					<dd>RHCE(Red Hat Certified Engineer/Red Hat認定エンジニア)</dd>
+					<dd>この鯖はRH7.3安定運用中。でもいい加減変えたい。</dd>
+					<dt><strong>C/C++</strong></dt>
+					<dd>歴10年。<a href="http://www.xlsoft.com/jp/products/intel/compilers/index.html" target="_blank">Intel Compiler</a>欲しい・・・最近Cのコード書いてなし。</dd>
+					<dt><strong><a href="http://www.php.net/" target="_blank">PHP</a></strong></dt>
+					<dd>歴6年。</dd>
+					<dd><a href="http://cakephp.org/" target="_blank">CakePHP</a>は1.1の頃(日本語マニュアルが出る直前ぐらい)から愛用しております。</dd>
+					<dd><a href="http://matsuri.cakephp.jp/" target="_blank">CakeMatsuriTokyo2009</a>はカンファレンスデーのみ参加予定。皆様楽しみましょー！</dd>
+					<dt><strong><a href="http://www.ruby-lang.org/" target="_blank">Ruby</a></strong></dt>
+					<dd>歴8年。<a href="http://rubyonrails.org/" target="_blank">Rails</a>便利だけど最近はCakePHPで提案しちゃうことが多いです。</dd>
+					<dt><strong><a href="http://www.perl.com/" target="_blank">Perl</a></strong></dt>
+					<dd>歴6年。最近流行りのF/Wあります？<a href="http://tripletail.jp/" target="_blank">TripletaiL</a>を非公開時代に業務で2年ほど使用したくらい。</dd>
+					<dt><strong><a href="http://www.java.com/" target="_blank">JAVA</a></strong></dt>
+					<dd>歴1年ちょい。<a href="http://www.seasar.org/" target="_blank">Seasar</a>使ってるアプリの機能拡張・保守とか。</dd>
+				</dl>
+				<!-- Column 1 end -->
+			</div>
+			<div class="col2">
+				<!-- Column 2 start -->
+				<div>
+					<h3>近影</h3>
+					<p><img src="/img/motorshow.jpg" width="180" height="240" alt="2009東京モーターショにて" /></p>
+				</div>
+				<div>
+					<h3>作ったもの(仕事ぬき)</h3>
+					<ul>
+						<li>[2009] <a href="http://twitter.com/kitanai_ninja/">汚い忍者</a>(twitter bot)※調整中</li>
+						<li>[2006] <a href="http://kumanews.oresama.jp/">クマニュース</a></li>
+						<li>[2003] <a href="/kumauta/">くまうた うｐろだ</a></li>
+						<li>[2003] <a href="/infobar/">INFOBARアルバム</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>IDなどなど</h3>
+					<ul>
+						<li>gmail: fjmoto<script type="text/javascript">document.write('＠');</script><noscript>＠</noscript>gmail.com</a></li>
+						<li>windows live: fjmoto<script type="text/javascript">document.write('＠');</script><noscript>＠</noscript>hotmail.com</a></li>
+						<li>skype: fjmoto</li>
+						<li>hatena: <a href="http://b.hatena.ne.jp/fjmoto/">fjmoto</a></li>
+						<li>twitter: <a href="http://twitter.com/fjmoto/">fjmoto</a> [<a href="http://twilog.org/fjmoto">Twilog</a>]</li>
+						<li>mixi: <a href="http://mixi.jp/show_friend.pl?id=37929">fj(えふじぇー)</a></li>
+						<li>facebook: <a href="http://www.facebook.com/profile.php?id=100000417377296">100000417377296</a></li>
+						<li>ニコ動: <a href="http://www.nicovideo.jp/user/80619">ソレガシ</a></li>
+						<li>携帯百景: <a href="http://movapic.com/fj">fj</a></li>
+						<li>frickr: <a href="http://www.flickr.com/photos/25168219@N07/">fjmoto</a></li>
+						<li>Picasa: <a href="http://picasaweb.google.co.jp/fjmoto">一般公開ギャラリー</a></li>
+						<li>mob strike: <a href="http://mfga.jp/family/u3lunl">fj</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col3">
+				<!-- Column 3 start -->
+				<script type="text/javascript">
+					function initialize_sakura() {
+						var feed = new google.feeds.Feed("http://oresama.jp/blog/log/index.rdf");
+						feed.load(function(result) {
+							if (!result.error) {
+								var container = document.getElementById("feed_sakura");
+								for (var i = 0; i < result.feed.entries.length; i++) {
+									var entry1 = result.feed.entries[i];
+									var div1 = document.createElement("div");
+									div1.appendChild(document.createTextNode(entry1.title));
+									container.appendChild(div1);
+								}
+							}
+						});
+					}
+					function initialize_twitter() {
+						var feed = new google.feeds.Feed("http://twitter.com/statuses/user_timeline/6053682.rss");
+						feed.load(function(result) {
+							if (!result.error) {
+								var container = document.getElementById("feed_twitter");
+								for (var i = 0; i < result.feed.entries.length; i++) {
+									var entry2 = result.feed.entries[i];
+									var div2 = document.createElement("div");
+									div2.appendChild(document.createTextNode(entry2.title.replace("fjmoto: ", '') + ' [' + entry2.publishedDate + ']'));
+									container.appendChild(div2);
+								}
+							}
+						});
+					}
+					google.setOnLoadCallback(initialize_sakura);
+					google.setOnLoadCallback(initialize_twitter);
+				</script>
+				<div>
+					<h3>直近のエントリ</h3>
+					<h4><a href="/blog/" title="桜上水日記">桜上水日記</a></h4>
+					<div id="feed_sakura"></div>
+					<h4><a href="http://twitter.com/fjmoto/">Twitter</a></h4>
+					<div id="feed_twitter"></div>
+   				</div>
+				<div>
+					<h3>最近買ったもの</h3>
+					<div>
+						<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=oresamajp-22&o=9&p=8&l=as1&asins=B002C1ARIU&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+						<iframe src="http://rcm-jp.amazon.co.jp/e/cm?t=oresamajp-22&o=9&p=8&l=as1&asins=B002CZOW28&fc1=000000&IS2=1&lt1=_blank&m=amazon&lc1=0000FF&bc1=000000&bg1=FFFFFF&f=ifr" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+					</div>
+   				</div>
+				<h4></h4>
+				<!-- Column 3 end -->
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<p>2001-2009&#169俺様.jp [<a href="http://matthewjamestaylor.com/blog/perfect-multi-column-liquid-layouts">style参考元</a>]</p>
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-357091-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
