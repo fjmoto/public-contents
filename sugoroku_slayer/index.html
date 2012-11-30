@@ -388,6 +388,10 @@
 			$("#makerSubmit").attr('disabled', 'disabled');
 		});
 
+		$('a[href=#]').click(function(){
+			return false;
+		});
+
 		// toggle
 		$('.basic').toggle({
 			style: {
