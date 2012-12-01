@@ -388,8 +388,10 @@
 			$("#makerSubmit").attr('disabled', 'disabled');
 		});
 
-		$('a[href=#]').click(function(){
-			return false;
+		$("a[href=#]").click(function(e){
+			if( $(this).attr('id') != 'tweetResult' ){
+				e.preventDefault();
+			}
 		});
 
 		// toggle
