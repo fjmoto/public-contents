@@ -297,7 +297,7 @@
 							<ul class="unstyled">
 								<li>Windows7 - IE9, Firefox, Chrome, Safari</li>
 								<li>MacOS - Chrome, Safari</li>
-								<li>iOS6(iPad mini) - Chrome</li>
+								<li>iOS6(iPad mini) - Safari</li>
 								<li>その他スマホは動作保証外です。。。</li>
 							</ul>
 						</td>
@@ -389,7 +389,7 @@
 			$("#makerSubmit").attr('disabled', 'disabled');
 		});
 
-		$("a[href=#]").live('click', function(e){
+		$("a[href=#]").on('click', function(e){
 			e.preventDefault();
 		});
 
